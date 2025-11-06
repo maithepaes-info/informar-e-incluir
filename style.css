@@ -1,0 +1,186 @@
+/* ===========================
+   RESET GERAL E PADRÃO BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fff6f6, #ffeaea);
+  color: #330000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  opacity: 1;
+  transition: opacity 0.6s ease, background 0.8s ease;
+}
+
+/* ===========================
+   CONTAINER PRINCIPAL
+=========================== */
+.container {
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* ===========================
+   EFEITO FADE SUAVE
+=========================== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   TEXTOS E TÍTULOS
+=========================== */
+h1 {
+  color: #a80000;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a0000;
+}
+
+/* ===========================
+   BOTÕES PRINCIPAIS (index)
+=========================== */
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background: #b80000;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(184, 0, 0, 0.25);
+}
+
+.btn:hover {
+  background: #d00000;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #330000;
+}
+
+.btn.secondary:hover {
+  background: #550000;
+}
+
+/* ===========================
+   SEÇÃO “PRÓXIMA ESTAÇÃO”
+=========================== */
+.next-station {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.next-station p {
+  font-size: 0.9rem;
+  color: #660000;
+  margin-bottom: 0.2rem;
+}
+
+.arrow {
+  display: inline-block;
+  background: #b80000;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 8px rgba(184, 0, 0, 0.25);
+}
+
+.arrow:hover {
+  background: #d00000;
+  transform: scale(1.1);
+}
+
+/* ===========================
+   RESPONSIVIDADE — MOBILE FIRST
+=========================== */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.75rem;
+  }
+}
+
+/* ===========================
+   ANIMAÇÃO DE FUNDO
+=========================== */
+body.fade-out {
+  opacity: 0;
+  background: linear-gradient(180deg, #fff1f1, #ffd8d8);
+}
